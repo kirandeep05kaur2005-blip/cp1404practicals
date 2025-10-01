@@ -1,0 +1,32 @@
+MINIMUM_LENGTH = 4
+
+
+def version_1():
+    """Original version without functions."""
+    password = input(f"Enter password of at least {MINIMUM_LENGTH} characters: ")
+    while len(password) < MINIMUM_LENGTH:
+        password = input(f"Enter password of at least {MINIMUM_LENGTH} characters: ")
+    print('*' * len(password))
+
+
+def main():
+    """Refactored version using functions."""
+    password = get_password(MINIMUM_LENGTH)
+    print_asterisks(password)
+
+
+def get_password(minimum_length):
+    """Get a valid password with at least the given minimum length."""
+    password = input(f"Enter password of at least {minimum_length} characters: ")
+    while len(password) < minimum_length:
+        print("Password too short")
+        password = input(f"Enter password of at least {minimum_length} characters: ")
+    return password
+
+
+def print_asterisks(sequence):
+    """Print asterisks equal to the length of the given sequence."""
+    print('*' * len(sequence))
+
+
+main()
