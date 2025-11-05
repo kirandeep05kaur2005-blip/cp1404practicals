@@ -1,7 +1,7 @@
 """
 Guitar class
 Estimate: 12 minutes
-Actual:   ___ minutes
+Actual:   10 minutes
 """
 from datetime import date
 
